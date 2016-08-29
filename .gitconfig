@@ -1,0 +1,9 @@
+[user]
+	name = QuiZr
+	email = tymoteusz.adamczyk@outlook.com
+[push]
+	default = current
+[alias]
+    slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --exclude=refs/stash --all
+[core]
+	autocrlf = input
