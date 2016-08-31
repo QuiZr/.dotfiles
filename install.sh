@@ -4,7 +4,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files=".zshrc .dircolors .gitconfig .oh-my-zsh/lib/completion.zsh"        # list of files/folders to symlink in homedir
+files=".zshrc .dircolors .gitconfig .oh-my-zsh/lib/completion.zsh .ssh/config .ssh/underhoundeu"        # list of files/folders to symlink in homedir
 
 ##########
 

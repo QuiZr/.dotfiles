@@ -107,4 +107,5 @@ bindkey "\e[1;5D" backward-word
 bindkey "\C-_" backward-kill-word
 bindkey "\e[3;5~" kill-word
 
-
+# most important thing
+alias scrawl="ssh terminal@underhound.eu"
