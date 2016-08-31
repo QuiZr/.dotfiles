@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/quizr/.oh-my-zsh
+export ZSH=/home/quizr/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,6 +8,10 @@
 
 DEFAULT_USER="quizr"
 ZSH_THEME="agnoster"
+
+# http://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output
+# http://stackoverflow.com/questions/23555836/getting-zsh-to-honor-dircolors-solarized
+eval "$(dircolors ~/.dircolors)";
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -65,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -84,10 +88,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias Kod="cd /mnt/d/Kod/"
+
+if [ -d "/mnt/d/Kod" ]
+then
+    alias Kod="cd /mnt/d/Kod/"
+elif [ -d "/mnt/c/Kod" ]
+then
+    alias Kod="cd /mnt/c/Kod/"
+fi
 
 # MINTTY STUFF
-
 
 # ctrl-left/right
 bindkey "\e[1;5C" forward-word
@@ -97,6 +107,4 @@ bindkey "\e[1;5D" backward-word
 bindkey "\C-_" backward-kill-word
 bindkey "\e[3;5~" kill-word
 
-# http://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output
-eval "$(dircolors ~/.dircolors)";
 
