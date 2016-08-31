@@ -26,4 +26,8 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
+echo "Setting permissions of ssh stuff"
+chmod 700 ~/.ssh/config
+chmod 700 ~/.ssh/underhoundeu
+
 echo "Done! In order for the changes to take effect, please restart your terminal."
