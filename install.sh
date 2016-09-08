@@ -26,7 +26,7 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
-echo "Setting permissions of ssh stuff"
+echo "Setting permissions of ssh config and keys."
 chmod 700 ~/.ssh/config
 chmod 700 ~/.ssh/underhoundeu
 
