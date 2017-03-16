@@ -1,4 +1,6 @@
 #!/bin/sh
+    sudo update-locale LANG=en_US.UTF8
+
     sudo add-apt-repository ppa:git-core/ppa
     sudo apt update
     sudo apt install git wget zsh
