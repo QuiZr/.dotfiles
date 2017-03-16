@@ -4,7 +4,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files=".zshrc .dircolors .gitconfig .oh-my-zsh/lib/completion.zsh .ssh/config .ssh/underhoundeu"        # list of files/folders to symlink in homedir
+files=".zshrc_custom .dircolors .gitconfig .ssh/config .ssh/underhoundeu .zpreztorc .zprofile"        # list of files/folders to symlink in homedir
 
 ##########
 
@@ -18,6 +18,9 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
+echo "Creating nessesery folders"
+mkdir ~/.ssh
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
@@ -29,5 +32,10 @@ done
 echo "Setting permissions of ssh config and keys."
 chmod 700 ~/.ssh/config
 chmod 700 ~/.ssh/underhoundeu
+chmod 700 ~/.ssh
+
+echo "Enabling .zshrc_custom to run"
+chmod +x ~/.zshrc_custom
+echo '\n~/.zshrc_custom' >> ~/.zshrc
 
 echo "Done! In order for the changes to take effect, please restart your terminal."
