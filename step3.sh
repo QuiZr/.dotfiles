@@ -35,7 +35,6 @@ chmod 700 ~/.ssh/underhoundeu
 chmod 700 ~/.ssh
 
 echo "Enabling .zshrc_custom to run"
-chmod +x ~/.zshrc_custom
-echo '\n~/.zshrc_custom' >> ~/.zshrc
+echo '\nsource ~/.zshrc_custom' >> ~/.zshrc
 
 echo "Done! In order for the changes to take effect, please restart your terminal."
