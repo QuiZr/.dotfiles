@@ -15,7 +15,7 @@ echo "Installing packages"
 echo "--------------------------------------------------------------------------------"
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update
-sudo apt install git wget zsh tmux -y
+sudo apt install git wget zsh tmux vim -y
 sudo apt upgrade -y
 sudo apt-get autoremove --purge -y
 
@@ -23,7 +23,7 @@ echo "--------------------------------------------------------------------------
 echo "Cloning oh-my-zsh"
 echo "--------------------------------------------------------------------------------"
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-chsh -s /bin/zsh
+chsh -s $(which zsh)
 
 echo "--------------------------------------------------------------------------------"
 echo "Copying config files"
@@ -37,7 +37,7 @@ olddir=~/.dotfiles_old
 # list of files/folders to symlink in homedir
 files=".zshrc .dircolors .vimrc .gitconfig .ssh/config .ssh/underhoundeu"
 
-mkdir ~/.ssh
+mkdir -p ~/.ssh
 mkdir -p $olddir
 cd $dir
 

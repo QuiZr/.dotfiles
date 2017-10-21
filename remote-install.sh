@@ -1,5 +1,5 @@
 #!/bin/sh
-if !hash git 2>/dev/null; then
+if ! type git > /dev/null; then
     sudo apt update
     sudo apt install git -y
 fi
