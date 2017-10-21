@@ -1,4 +1,4 @@
-export ZSH=/home/quizr/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 export EDITOR='vim'
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_THEME="agnoster"
