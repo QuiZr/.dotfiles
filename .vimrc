@@ -1,0 +1,9 @@
+set nu
+syntax enable
+set shiftwidth=4
+set expandtab
+set tabstop=4
+set mouse=a
+set hlsearch
+set incsearch
+set autoindent
