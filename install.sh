@@ -43,14 +43,14 @@ cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    mv ~/$file $olddir/
+    mv ~/$file $olddir/ 2>/dev/null
     ln -s $dir/$file ~/$file
 done
 
 chmod 400 ~/.ssh/config
 chmod 400 ~/.ssh/underhoundeu
-chmod 400 ~/.ssh/id_rsa
-chmod 500 ~/.ssh
+chmod 400 ~/.ssh/id_rsa 2>/dev/null
+chmod 700 ~/.ssh
 
 echo "--------------------------------------------------------------------------------"
 echo "Done! In order for the changes to take effect, please restart your terminal."
