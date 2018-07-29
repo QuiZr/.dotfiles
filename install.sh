@@ -13,7 +13,6 @@ export LANGUAGE=en_US.UTF-8
 echo "--------------------------------------------------------------------------------"
 echo "Installing packages"
 echo "--------------------------------------------------------------------------------"
-sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update
 sudo apt install git wget zsh tmux vim -y
 sudo apt upgrade -y
@@ -35,7 +34,7 @@ dir=~/.dotfiles
 olddir=~/.dotfiles_old
 
 # list of files/folders to symlink in homedir
-files=".zshrc .dircolors .vimrc .gitconfig .ssh/config .ssh/underhoundeu"
+files=".zshrc .vimrc .gitconfig .ssh/config .ssh/underhoundeu"
 
 mkdir -p ~/.ssh
 mkdir -p $olddir
